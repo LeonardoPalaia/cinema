@@ -52,6 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Simula un cambiamento per inizializzare la select delle date
             movieSelect.dispatchEvent(new Event('change'));
+
+            // Seleziona automaticamente il film basato sul parametro URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedFilm = urlParams.get('film');
+            if (selectedFilm) {
+                for (let i = 0; i < movieSelect.options.length; i++) {
+                    if (movieSelect.options[i].textContent === selectedFilm) {
+                        movieSelect.selectedIndex = i;
+                        movieSelect.dispatchEvent(new Event('change'));
+                        break;
+                    }
+                }
+            }
         })
         .catch(error => {
             console.error('Fetch error:', error);
