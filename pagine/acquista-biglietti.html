@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquista Biglietti - Cinema</title>
+    <link rel="icon" href="../immagini/ticket-ico.png" type="image/x-icon">
+    <script src="../scripts/script_acquista_biglietti.js" defer></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style_acquista_biglietti.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img class="img-logo" src="../immagini/logo2.png" alt="logo">
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="../index.html">Home<span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="../index.html#news">News e Aggiornamenti</a></li>
+                        <li><a href="../index.html#recensioni">Recensioni</a></li>
+                        <li><a href="../index.html#faq">Domande Frequenti</a></li>
+                    </ul>
+                </li>
+                <li><a href="programmazione.html">Programmazione</a></li>
+                <li><a href="acquista_biglietti.html">Acquista Biglietti</a></li>
+                <li><a href="prezzi.html">Prezzi</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="center-container">
+                <h1>Acquista Biglietti</h1>
+            </div>
+
+            <form id="ticketForm" class="form-grid">
+                <div class="form-group">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" id="name" placeholder="Inserire il nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="surname" class="form-label">Cognome</label>
+                    <input type="text" id="surname" placeholder="Inserire il cognome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" placeholder="Inserire la mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-label">Numero di Telefono</label>
+                    <input type="tel" id="phone" placeholder="Inserire il numero di telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="movie" class="form-label">Film</label>
+                    <select id="movie" required>
+                        <!-- Opzioni popolate dinamicamente con Ajax -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity" class="form-label">Quantità Biglietti</label>
+                    <input type="number" id="quantity" min="1" max="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="date" class="form-label">Orario</label>
+                    <select id="date" required>
+                        <!-- Opzioni popolate dinamicamente con Ajax -->
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Acquista</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4 class="footer-title">Social</h4>
+                <div class="social-icons">
+                    <div class="align-item-footer"><a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i><span class="footer-text">Facebook</span></a></div>
+                    <div class="align-item-footer"><a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i><span class="footer-text">Twitter</span></a></div>
+                    <div class="align-item-footer"><a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i><span class="footer-text">Instagram</span></a></div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Cinema</h4>
+                <div class="footer-links">
+                    <a href="programmazione.html">Programmazione</a>
+                    <a href="acquista-biglietti.html">Acquista Biglietti</a>
+                    <a href="prezzi.html">Prezzi</a>
+                    <a href="chi-siamo.html">Chi Siamo</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Informazioni</h4>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Condizioni di Utilizzo</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.price-table th,
+.price-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.price-table th {
+    background-color: #f8f9fa;
+}
+
+.price-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

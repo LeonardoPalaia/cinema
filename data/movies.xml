@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+    <movie>
+        <id>1</id>
+        <title>Il Regno del Pianeta delle Scimmie</title>
+        <dates>
+            <date>2024-06-01 18:00</date>
+            <date>2024-06-02 20:00</date>
+            <date>2024-06-03 22:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>2</id>
+        <title>Deadpool e Wolverine</title>
+        <dates>
+            <date>2024-06-01 19:00</date>
+            <date>2024-06-02 21:00</date>
+            <date>2024-06-03 23:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>3</id>
+        <title>Il Gladiatore</title>
+        <dates>
+            <date>2024-06-04 18:00</date>
+            <date>2024-06-05 20:00</date>
+            <date>2024-06-06 22:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>4</id>
+        <title>Bad Boys</title>
+        <dates>
+            <date>2024-06-07 18:00</date>
+            <date>2024-06-08 20:00</date>
+            <date>2024-06-09 22:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>5</id>
+        <title>Freelance</title>
+        <dates>
+            <date>2024-06-10 18:00</date>
+            <date>2024-06-11 20:00</date>
+            <date>2024-06-12 22:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>6</id>
+        <title>The French Dispatch</title>
+        <dates>
+            <date>2024-06-01 18:00</date>
+            <date>2024-06-02 20:00</date>
+            <date>2024-06-03 22:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>7</id>
+        <title>Don't Look Up</title>
+        <dates>
+            <date>2024-06-04 19:00</date>
+            <date>2024-06-05 21:00</date>
+            <date>2024-06-06 23:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>8</id>
+        <title>Free Guy</title>
+        <dates>
+            <date>2024-06-07 19:00</date>
+            <date>2024-06-08 21:00</date>
+            <date>2024-06-09 23:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>9</id>
+        <title>Palm Springs</title>
+        <dates>
+            <date>2024-06-10 19:00</date>
+            <date>2024-06-11 21:00</date>
+            <date>2024-06-12 23:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>10</id>
+        <title>The Lost City</title>
+        <dates>
+            <date>2024-06-13 18:00</date>
+            <date>2024-06-14 20:00</date>
+            <date>2024-06-15 22:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>11</id>
+        <title>A Quiet Place Part II</title>
+        <dates>
+            <date>2024-06-01 18:00</date>
+            <date>2024-06-02 20:00</date>
+            <date>2024-06-03 22:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>12</id>
+        <title>The Conjuring: The Devil Made Me Do It</title>
+        <dates>
+            <date>2024-06-04 19:00</date>
+            <date>2024-06-05 21:00</date>
+            <date>2024-06-06 23:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>13</id>
+        <title>Malignant</title>
+        <dates>
+            <date>2024-06-07 19:00</date>
+            <date>2024-06-08 21:00</date>
+            <date>2024-06-09 23:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>14</id>
+        <title>Last Night in Soho</title>
+        <dates>
+            <date>2024-06-10 19:00</date>
+            <date>2024-06-11 21:00</date>
+            <date>2024-06-12 23:00</date>
+        </dates>
+    </movie>
+    <movie>
+        <id>15</id>
+        <title>The Night House</title>
+        <dates>
+            <date>2024-06-13 19:00</date>
+            <date>2024-06-14 21:00</date>
+            <date>2024-06-15 23:00</date>
+        </dates>
+    </movie>
+</movies>

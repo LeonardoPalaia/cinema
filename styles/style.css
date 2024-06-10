@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Stile di base per il corpo della pagina */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Previene l'overflow orizzontale della pagina */
+}
+
+/* Stile per l'intestazione */
+header {
+    background: linear-gradient(135deg, #ff0000, #680202);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+img[src="immagini/pop-corn.png"] {
+    width: 50px;
+    height: auto;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.center-container {
+    text-align: center; /* Centra il contenitore */
+}
+
+/* Stile per il titolo h1 */
+h1 {
+    font-size: 3em;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 45px 0;
+    letter-spacing: 2px;
+    background: black;
+    -webkit-background-clip: text;
+    color: transparent;
+    border-bottom: 5px solid #ff0000;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+    transform: rotate(-2deg);
+    text-align: center;
+    justify-content: center;
+    display: inline-block; /* Imposta display inline-block per restringere la larghezza */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Stile per la navigazione */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 5px; /* Spazio extra sotto il testo per la sottolineatura */
+    display: block;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px; /* Altezza della sottolineatura */
+    background-color: #ffffff; /* Colore della sottolineatura */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Distanza della sottolineatura al testo */
+    transition: width 0.4s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Stile per la freccia accanto a "Home" */
+nav ul li a .arrow {
+    font-size: 1em;
+    margin-left: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 200px;
+    top: 30px; /* Spostato leggermente verso il basso per evitare sovrapposizione */
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+.dropdown-content li {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.dropdown-content li a::after {
+    bottom: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Stile per le informazioni sui film */
+.film {
+    text-align: center;
+}
+
+.film img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Stile per il contenitore di Swiper */
+.swiper-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 20px 0;
+    position: relative; /* Imposta la posizione relativa per contenere i pulsanti di navigazione */
+}
+
+/* Stile per il wrapper di Swiper */
+.swiper-wrapper {
+    display: flex;
+}
+
+/* Stile per le slide di Swiper */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stile per le immagini nelle slide */
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Aggiungi una transizione fluida per l'effetto zoom */
+}
+
+/* Effetto zoom al passaggio del mouse */
+.swiper-slide img:hover {
+    transform: scale(1.1); /* Ingrandisci l'immagine del 10% */
+}
+
+/* Stile per i pulsanti di navigazione di Swiper */
+.swiper-button-next, .swiper-button-prev {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    padding: 5px;
+    width: auto;
+    height: auto;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: #0000007a;
+    border-radius: 10px;
+}
+
+.swiper-button-next:active, .swiper-button-prev:active
+{
+    transform: scale(0.9);
+}
+
+/* Posiziona il pulsante "prev" a sinistra */
+.swiper-button-prev {
+    left: 10px;
+}
+
+/* Posiziona il pulsante "next" a destra */
+.swiper-button-next {
+    right: 10px;
+}
+
+/* Stile per la sezione News e Aggiornamenti */
+#news {
+    padding: 40px 20px;
+    
+    color: #333;
+    text-align: center;
+}
+
+#news h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.news-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.news-item img {
+    width: 10%;
+    height: auto;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.news-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.news-content .date {
+    display: block;
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* Responsività per dispositivi mobili */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .news-item img {
+        max-width: 10%;
+    }
+
+    .news-content {
+        text-align: center;
+    }
+}
+
+/* Stile per la sezione Recensioni */
+#recensioni {
+    color: #333;
+    text-align: center;
+}
+
+#recensioni h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Due colonne */
+    gap: 20px; /* Spazio tra le recensioni */
+    justify-items: center;
+}
+
+.review {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.review-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-size: 1em;
+    color: #999;
+}
+
+/* Stile per la sezione FAQ */
+#faq {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+#faq h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff0000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item {
+    margin: 20px 0;
+}
+
+.faq-question {
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Icone per mostrare/chiudere le risposte */
+.faq-question::after {
+    content: '\25BC'; /* Freccia giù */
+    font-size: 1em;
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    content: '\25BC'; /* Freccia su */
+    transform: rotate(180deg);
+}
+
+/* Stile per la transizione delle risposte */
+.faq-answer {
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+/* Stile per il footer */
+footer {
+    background: linear-gradient(135deg, #ff0000, #680202);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.align-item-footer i{
+    width: 5%;
+    text-align: left;
+}
+
+.align-item-footer span{
+    width: 95%;
+    text-align: left;
+}
+
+.footer-title {
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-text {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.8em;
+    margin-left: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 10px 0px;
+    transition: color 0.3s;
+    display: block;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #e07070; 
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0px;
+    transition: color 0.3s;
+    font-size: 1.1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+}
+
+.footer-links a:hover {
+    color: #e07070; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
