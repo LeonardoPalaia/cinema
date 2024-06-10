@@ -31,7 +31,6 @@
 
 .card-text {
     font-size: 1rem;
-    
 }
 
 .row-custom {
@@ -64,3 +63,15 @@ img[src="../immagini/tickets.png"] {
     height: auto;
 }
 
+/*stile leggi di piu*/
+
+.mybox1 { 
+	display: none; 
+} 
+
+button { 
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+} 
