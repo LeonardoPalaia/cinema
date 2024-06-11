@@ -57,12 +57,12 @@
                 </div>
                 <div class="form-group">
                     <label for="phone" class="form-label">Numero di Telefono</label>
-                    <input type="tel" id="phone" placeholder="Inserire il numero di telefono" required>
+                    <input type="tel" id="phone" placeholder="Inserire il numero di telefono" pattern="[0-9]{10}" required>
                 </div>
                 <div class="form-group">
                     <label for="movie" class="form-label">Film</label>
                     <select id="movie" required>
-                        <!-- Opzioni popolate dinamicamente con Ajax -->
+                        <!--Riempio la select con i film-->    
                     </select>
                 </div>
                 <div class="form-group">
@@ -72,14 +72,14 @@
                 <div class="form-group">
                     <label for="date" class="form-label">Orario</label>
                     <select id="date" required>
-                        <!-- Opzioni popolate dinamicamente con Ajax -->
+                        <!--Riempio la select con le date-->      
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="vipSeats" class="form-label">Posto vip (+ 2.0€)</label>
                     <div class="radio-container">
-                        <div><input type="radio" name="vip" id="si"><label for="si">Si</label></div>
-                        <div><input type="radio" name="vip" id="no"><label for="no">No</label></div>
+                        <div><input type="radio" name="vip" id="si" required><label for="si">Si</label></div>
+                        <div><input type="radio" name="vip" id="no" required><label for="no">No</label></div>
                     </div>
                 </div>
                 <div class="button-container">

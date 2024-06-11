@@ -26,6 +26,9 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+.form-group #name, .form-group #surname, .form-group #email, .form-group #phone, .form-group #quantity {
+  width: 96%;
+}
 
 .form-grid {
   display: grid;
@@ -37,13 +40,12 @@
   grid-column: span 2;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 17px;
 }
 .button-container input[type=radio] {
   margin-right: 5px;
 }
 .button-container label {
-  margin-right: 20px;
   display: flex;
   align-items: center;
 }
