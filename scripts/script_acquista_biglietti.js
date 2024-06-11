@@ -8,14 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 return response.text();
             } else {
-                throw new Error('Network error');
+                throw new Error('Errore');
             }
         })
         .then(str => (new window.DOMParser()).parseFromString(str, 'text/xml'))
         .then(data => {
             const movies = data.getElementsByTagName('movie');
-
-            // Popola la select dei film
+            
             for (let i = 0; i < movies.length; i++) {
                 const id = movies[i].getElementsByTagName('id')[0].textContent;
                 const title = movies[i].getElementsByTagName('title')[0].textContent;
@@ -26,22 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 option.textContent = title;
                 movieSelect.appendChild(option);
 
-                // Memorizza le date associate al film
                 movieData[id] = [];
                 for (let j = 0; j < dates.length; j++) {
                     movieData[id].push(dates[j].textContent);
                 }
             }
 
-            // Aggiorna la select delle date quando cambia il film selezionato
             movieSelect.addEventListener('change', (e) => {
                 const selectedMovieId = e.target.value;
                 const dates = movieData[selectedMovieId];
 
-                // Svuota la select delle date
                 dateSelect.innerHTML = '';
 
-                // Popola la select delle date con le nuove opzioni
                 dates.forEach(date => {
                     const option = document.createElement('option');
                     option.value = date;
@@ -50,10 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Simula un cambiamento per inizializzare la select delle date
             movieSelect.dispatchEvent(new Event('change'));
 
-            // Seleziona automaticamente il film basato sul parametro URL
             const urlParams = new URLSearchParams(window.location.search);
             const selectedFilm = urlParams.get('film');
             if (selectedFilm) {

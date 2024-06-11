@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Swiper JS initialization 
     const swiper = new Swiper('.swiper-container', {
         loop: true,
-        slidesPerView: 7, // Numero di immagini visibili contemporaneamente
-        spaceBetween: 15, // Spazio tra le immagini
+        slidesPerView: 7, 
+        spaceBetween: 15,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -14,12 +13,30 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
         autoplay: {
-            delay: 3000, // Cambio automatico delle immagini ogni 3 secondi
+            delay: 3000, 
             disableOnInteraction: false,
         },
+        breakpoints: {
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 15,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 15,
+            },
+            1440: {
+                slidesPerView: 7,
+                spaceBetween: 15,
+            },
+        }
     });
 
-    // Event listener per le domande frequenti (FAQ)
+
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
@@ -31,5 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 answer.style.display = 'none';
             }
         });
+    });
+
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+        menuToggle.classList.toggle('active');
     });
 });

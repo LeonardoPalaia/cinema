@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-/* Stile di base per il corpo della pagina */
 body {
     background-color: #f7f7f7;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Previene l'overflow orizzontale della pagina */
+    overflow-x: hidden; 
 }
 
-/* Stile per l'intestazione */
 header {
     background: linear-gradient(135deg, #ff0000, #680202);
     color: #fff;
@@ -25,10 +23,9 @@ img[src="immagini/pop-corn.png"] {
 }
 
 .center-container {
-    text-align: center; /* Centra il contenitore */
+    text-align: center;
 }
 
-/* Stile per il titolo h1 */
 h1 {
     font-size: 3em;
     color: #333;
@@ -45,7 +42,7 @@ h1 {
     transform: rotate(-2deg);
     text-align: center;
     justify-content: center;
-    display: inline-block; /* Imposta display inline-block per restringere la larghezza */
+    display: inline-block; 
 }
 
 @keyframes fadeIn {
@@ -53,8 +50,6 @@ h1 {
     to { opacity: 1; }
 }
 
-
-/* Stile per la navigazione */
 nav ul {
     list-style: none;
     padding: 0;
@@ -71,7 +66,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding-bottom: 5px; /* Spazio extra sotto il testo per la sottolineatura */
+    padding-bottom: 5px; 
     display: block;
 }
 
@@ -79,11 +74,11 @@ nav ul li a::after {
     content: '';
     display: block;
     width: 0;
-    height: 3px; /* Altezza della sottolineatura */
-    background-color: #ffffff; /* Colore della sottolineatura */
+    height: 3px; 
+    background-color: #ffffff; 
     position: absolute;
     left: 0;
-    bottom: -5px; /* Distanza della sottolineatura al testo */
+    bottom: -5px; 
     transition: width 0.4s;
 }
 
@@ -91,13 +86,11 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Stile per la freccia accanto a "Home" */
 nav ul li a .arrow {
     font-size: 1em;
     margin-left: 5px;
 }
 
-/* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -105,7 +98,7 @@ nav ul li a .arrow {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     min-width: 200px;
-    top: 30px; /* Spostato leggermente verso il basso per evitare sovrapposizione */
+    top: 30px; 
     background: #ff0000;
     border-radius: 10px;
 }
@@ -123,7 +116,112 @@ nav ul li a .arrow {
     display: block;
 }
 
-/* Stile per le informazioni sui film */
+.menu-toggle {
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.menu-icon::before {
+    transform: translateY(-10px);
+}
+
+.menu-icon::after {
+    transform: translateY(10px);
+}
+
+.menu-toggle.active .menu-icon {
+    background: transparent;
+}
+
+.menu-toggle.active .menu-icon::before {
+    transform: rotate(45deg) ;
+}
+
+.menu-toggle.active .menu-icon::after {
+    transform: rotate(-45deg) ;
+}
+
+@media (max-width: 768px) {
+
+    .img-logo{
+        width: 50%;
+    }
+
+    .menuLogo{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    h1{
+        width: 50%;
+    }
+
+    img[src="immagini/pop-corn.png"] {
+       display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-right: 30px;
+    }
+
+    nav ul {
+        display: none; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    nav ul.show {
+        display: flex; 
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: none;
+        border-radius: 0;
+        top: 0;
+        padding: 0;
+    }
+
+    .dropdown-content li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        position: relative;
+        background-color: #ff0000;
+    }
+}
+
 .film {
     text-align: center;
 }
@@ -134,42 +232,36 @@ nav ul li a .arrow {
     border-radius: 8px;
 }
 
-/* Stile per il contenitore di Swiper */
 .swiper-container {
     width: 100%;
     max-width: 100%;
     height: auto;
     padding: 20px 0;
-    position: relative; /* Imposta la posizione relativa per contenere i pulsanti di navigazione */
+    position: relative; 
 }
 
-/* Stile per il wrapper di Swiper */
 .swiper-wrapper {
     display: flex;
 }
 
-/* Stile per le slide di Swiper */
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Stile per le immagini nelle slide */
 .swiper-slide img {
     width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
-    transition: transform 0.3s ease; /* Aggiungi una transizione fluida per l'effetto zoom */
+    transition: transform 0.3s ease; 
 }
 
-/* Effetto zoom al passaggio del mouse */
 .swiper-slide img:hover {
-    transform: scale(1.1); /* Ingrandisci l'immagine del 10% */
+    transform: scale(1.1); 
 }
 
-/* Stile per i pulsanti di navigazione di Swiper */
 .swiper-button-next, .swiper-button-prev {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
@@ -178,6 +270,7 @@ nav ul li a .arrow {
     padding: 5px;
     width: auto;
     height: auto;
+    transform: translateY(-50%);
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {
@@ -185,20 +278,40 @@ nav ul li a .arrow {
     border-radius: 10px;
 }
 
-.swiper-button-next:active, .swiper-button-prev:active
-{
-    transform: scale(0.9);
+.swiper-button-next:active, .swiper-button-prev:active {
+    transform: translateY(-50%) scale(0.9);
 }
 
-/* Posiziona il pulsante "prev" a sinistra */
 .swiper-button-prev {
     left: 10px;
 }
 
-/* Posiziona il pulsante "next" a destra */
 .swiper-button-next {
     right: 10px;
 }
+
+@media (max-width: 768px) {
+    .swiper-slide img {
+        width: 90%; 
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        width: 40px; 
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide img {
+        width: 100%; 
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        width: 30px; 
+        height: 30px;
+    }
+}
+
 
 /* Stile per la sezione News e Aggiornamenti */
 #news {
@@ -264,7 +377,8 @@ nav ul li a .arrow {
     }
 
     .news-item img {
-        max-width: 10%;
+        max-width: 100%;
+        padding-top: 30px;
     }
 
     .news-content {
@@ -311,6 +425,16 @@ nav ul li a .arrow {
     color: #999;
 }
 
+@media (max-width: 768px) {
+    .reviews-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+}
+
 /* Stile per la sezione FAQ */
 #faq {
     padding: 40px 20px;
@@ -342,9 +466,9 @@ nav ul li a .arrow {
     line-height: 1.5;
 }
 
-/* Icone per mostrare/chiudere le risposte */
+
 .faq-question::after {
-    content: '\25BC'; /* Freccia giù */
+    content: '\25BC'; 
     font-size: 1em;
     position: absolute;
     right: 0;
@@ -352,17 +476,15 @@ nav ul li a .arrow {
 }
 
 .faq-question.active::after {
-    content: '\25BC'; /* Freccia su */
+    content: '\25BC'; 
     transform: rotate(180deg);
 }
 
-/* Stile per la transizione delle risposte */
 .faq-answer {
     transition: max-height 0.5s ease-out;
     overflow: hidden;
 }
 
-/* Stile per il footer */
 footer {
     background: linear-gradient(135deg, #ff0000, #680202);
 }
@@ -434,7 +556,7 @@ footer {
     color: #e07070; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 480px){
     .container {
         flex-direction: column;
         align-items: center;
