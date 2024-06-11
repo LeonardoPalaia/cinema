@@ -312,8 +312,6 @@ nav ul li a .arrow {
     }
 }
 
-
-/* Stile per la sezione News e Aggiornamenti */
 #news {
     padding: 40px 20px;
     
@@ -369,7 +367,6 @@ nav ul li a .arrow {
     color: #999;
 }
 
-/* Responsività per dispositivi mobili */
 @media (max-width: 768px) {
     .news-item {
         flex-direction: column;
@@ -386,7 +383,6 @@ nav ul li a .arrow {
     }
 }
 
-/* Stile per la sezione Recensioni */
 #recensioni {
     color: #333;
     text-align: center;
@@ -401,8 +397,8 @@ nav ul li a .arrow {
 
 .reviews-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Due colonne */
-    gap: 20px; /* Spazio tra le recensioni */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
     justify-items: center;
 }
 
@@ -435,7 +431,6 @@ nav ul li a .arrow {
     }
 }
 
-/* Stile per la sezione FAQ */
 #faq {
     padding: 40px 20px;
     background-color: #f7f7f7;
