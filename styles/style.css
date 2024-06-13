@@ -218,7 +218,8 @@ nav ul li a .arrow {
     .dropdown:hover .dropdown-content {
         display: block;
         position: relative;
-        background-color: #ff0000;
+        background-color: #ff0000c6;
+        border-radius: 10px;
     }
 }
 
